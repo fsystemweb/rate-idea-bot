@@ -1,7 +1,7 @@
 <h1 align="center">Rate my Idea - Bot</h1>
 
 <p align="center">
-  <img src="public/logo.png" alt="logo" width="120px" height="120px"/>
+  <img src="public/logo.jpg" alt="logo" width="120px" height="120px"/>
   <br>
   <em>This project implements a production-ready Playwright bot designed to interact with `https://rateidea.us/`.  </br>
 The bot performs actions like commenting, ranking posts, and creating new ideas on a scheduled basis, simulating user activity.</em>
