@@ -19,9 +19,7 @@ async function runBot() {
     if (dayOfMonth % 10 === 5) {
       await commentAndRank(page);
     } else if (dayOfMonth % 10 === 0) {
-      //await createIdea(page);
-
-      await commentAndRank(page);
+      await createIdea(page);
     } else {
       console.log('No action scheduled for today. Browsing a bit...');
       await page.goto(`${WEBSITE_URL}dashboard`, { waitUntil: 'networkidle' });
