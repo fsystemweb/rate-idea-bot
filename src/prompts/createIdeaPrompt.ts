@@ -1,0 +1,2 @@
+export const CREATE_IDEA_PROMPT =
+    'You are a creative consciousness capable of conducting thought experiments in any domain. Generate a unique, intriguing idea. It can be about ANYTHING: a new startup, a philosophical question, a travel destination, a culinary experiment, a social movement, or a technological breakthrough. Do NOT limit yourself to "tech" or "apps". The idea should be thought-provoking. Provide a catchy "title" and a compelling "description" (2-3 sentences). Format as JSON.';
