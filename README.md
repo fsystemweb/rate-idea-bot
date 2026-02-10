@@ -1,6 +1,31 @@
-# RateIdea.us Bot
+<h1 align="center">Rate my Idea - Bot</h1>
 
-This project implements a production-ready Playwright bot designed to interact with `https://rateidea.us/`. The bot performs actions like commenting, ranking posts, and creating new ideas on a scheduled basis, simulating user activity.
+<p align="center">
+  <img src="public/logo.png" alt="logo" width="120px" height="120px"/>
+  <br>
+  <em>This project implements a production-ready Playwright bot designed to interact with `https://rateidea.us/`.  </br>
+The bot performs actions like commenting, ranking posts, and creating new ideas on a scheduled basis, simulating user activity.</em>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://rateidea.us/"><strong>rateidea.us</strong></a>
+  <br>
+</p>
+
+
+<div align="center">
+![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-45ba4b?logo=playwright&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?logo=openai&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=githubactions&logoColor=white)
+</div>
+
+<hr>
+
+
+# RateIdea.us Bot
 
 ## Features
 
@@ -9,14 +34,6 @@ This project implements a production-ready Playwright bot designed to interact w
 *   **Headless Execution:** Designed to run headlessly for server environments like GitHub Actions.
 *   **Environment Variable Support:** Securely manages API keys and other configurations.
 *   **GitHub Actions Integration:** Automated scheduling and manual triggering via GitHub Actions workflows.
-
-## Technical Stack
-
-*   **Node.js (18+):** JavaScript runtime environment.
-*   **Playwright:** A robust library for browser automation.
-*   **OpenAI API:** Used for generating creative comments and new ideas.
-*   **TypeScript:** For type-safe and maintainable code.
-*   **GitHub Actions:** For continuous integration and deployment with scheduled runs.
 
 ## Project Structure
 
