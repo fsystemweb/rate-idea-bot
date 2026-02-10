@@ -4,9 +4,8 @@ This project implements a production-ready Playwright bot designed to interact w
 
 ## Features
 
-*   **Comment and Rank Posts:** Every 5 days, the bot identifies the post with the lowest "reach," generates a unique and constructive comment using OpenAI, submits it, and then ranks the post with 5 stars.
-*   **Create New Ideas:** Every 20 days, the bot leverages OpenAI to generate a short, innovative tech idea (title and description) and submits it to the platform.
-*   **Simulated Browsing:** On days when specific actions are not scheduled, the bot navigates to the dashboard to simulate general user browsing activity.
+*   **Comment and Rank Posts:** If the day number ends with 5 (e.g., 5th, 15th, 25th), the bot identifies the post with the lowest "reach," generates a unique and constructive comment using OpenAI, submits it, and then ranks the post with 5 stars.
+*   **Create New Ideas:** If the day number ends with 0 (e.g., 10th, 20th, 30th), the bot leverages OpenAI to generate a short, innovative tech idea (title and description) and submits it to the platform.
 *   **Headless Execution:** Designed to run headlessly for server environments like GitHub Actions.
 *   **Environment Variable Support:** Securely manages API keys and other configurations.
 *   **GitHub Actions Integration:** Automated scheduling and manual triggering via GitHub Actions workflows.
@@ -96,6 +95,6 @@ To automate the bot's execution on a schedule using GitHub Actions:
 ## Customization
 
 *   **Selectors:** If the website's structure (`https://rateidea.us/`) changes, you may need to update the Playwright selectors in `src/bot.ts`. You can use Playwright's [codegen](https://playwright.dev/docs/codegen) tool (`npx playwright codegen https://rateidea.us/`) to help find new selectors.
-*   **Scheduling Logic:** Adjust the frequency of commenting/ranking and idea creation by modifying the modulo operations (`% 5` and `% 20`) in `src/bot.ts`.
+*   **Scheduling Logic:** Adjust the frequency of commenting/ranking and idea creation by modifying the date checks in `src/bot.ts` (currently based on days ending in 5 or 0).
 *   **OpenAI Prompts:** Customize the behavior of the AI-generated comments and ideas by editing the `messages` array within the `openai.chat.completions.create` calls in `src/bot.ts`.
 *   **Website URL:** The target URL is defined by the `WEBSITE_URL` constant in `src/bot.ts`.

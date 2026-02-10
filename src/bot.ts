@@ -118,10 +118,6 @@ async function runBot() {
   let browser: Browser | null = null;
   try {
     const now = new Date();
-    const startOfYear = new Date(now.getFullYear(), 0, 0);
-    const diff = now.getTime() - startOfYear.getTime();
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayOfYear = Math.floor(diff / oneDay);
 
     const headless = process.env.HEADLESS !== 'false';
     browser = await chromium.launch({ headless });
@@ -129,13 +125,11 @@ async function runBot() {
     const page = await context.newPage();
 
     await page.goto(WEBSITE_URL, { waitUntil: 'networkidle' });
+    const dayOfMonth = now.getDate();
 
-    // Day 1 of every 5-day cycle
-    if (dayOfYear % 5 === 1) {
+    if (dayOfMonth % 10 === 5) {
       await commentAndRank(page);
-    }
-    // Day 1 of every 20-day cycle
-    else if (dayOfYear % 20 === 1) {
+    } else if (dayOfMonth % 10 === 0) {
       await createIdea(page);
     } else {
       console.log('No action scheduled for today. Browsing a bit...');
