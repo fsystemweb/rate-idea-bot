@@ -1,0 +1,26 @@
+{
+  "name": "rateidea-bot",
+  "version": "1.0.0",
+  "description": "A Playwright bot for rateidea.us",
+  "main": "src/bot.ts",
+  "scripts": {
+    "start": "ts-node src/bot.ts"
+  },
+  "keywords": [
+    "playwright",
+    "bot",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.28.0",
+    "playwright": "^1.41.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

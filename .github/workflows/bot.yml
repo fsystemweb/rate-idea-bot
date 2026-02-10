@@ -1,0 +1,30 @@
+
+name: RateIdea.us Bot
+
+on:
+  workflow_dispatch: # Allows manual triggering
+  schedule:
+    - cron: '0 8 * * *' # Runs daily at 8:00 AM UTC
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run the bot
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: npm start
