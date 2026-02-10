@@ -75,7 +75,7 @@ async function commentAndRank(page: Page) {
   }
 
   console.log('Ranking post...');
-  // Rank 5 stars
+  
   await page.locator('[aria-label="rating"] button').nth(4).click();
   console.log('Post ranked.');
 }

@@ -4,8 +4,8 @@ This project implements a production-ready Playwright bot designed to interact w
 
 ## Features
 
-*   **Comment and Rank Posts:** If the day number ends with 5 (e.g., 5th, 15th, 25th), the bot identifies the post with the lowest "reach," generates a unique and constructive comment using OpenAI, submits it, and then ranks the post with 5 stars.
-*   **Create New Ideas:** If the day number ends with 0 (e.g., 10th, 20th, 30th), the bot leverages OpenAI to generate a short, innovative tech idea (title and description) and submits it to the platform.
+*   **Comment and Rank Posts** 
+*   **Create New Ideas:** 
 *   **Headless Execution:** Designed to run headlessly for server environments like GitHub Actions.
 *   **Environment Variable Support:** Securely manages API keys and other configurations.
 *   **GitHub Actions Integration:** Automated scheduling and manual triggering via GitHub Actions workflows.
