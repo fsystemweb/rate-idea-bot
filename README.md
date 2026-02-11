@@ -60,7 +60,7 @@ Follow these steps to set up and run the bot.
 
 *   **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/rateidea-bot.git
+    git clone https://github.com/fsystemweb/rate-idea-bot
     cd rateidea-bot
     ```
 *   **Install Dependencies:**
