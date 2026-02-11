@@ -49,7 +49,7 @@ rateidea-bot/
 ├── package.json              # Project dependencies and scripts
 ├── tsconfig.json             # TypeScript configuration
 └── src/
-    └── bot.ts                # Main bot logic
+    └── bot.ts                # Main bot orchestrator
 ```
 
 ## Getting Started
