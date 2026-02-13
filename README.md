@@ -48,8 +48,16 @@ rateidea-bot/
 ├── .gitignore                # Specifies intentionally untracked files
 ├── package.json              # Project dependencies and scripts
 ├── tsconfig.json             # TypeScript configuration
+├── public/
+│   └── logo.jpg              # Project logo used in README
 └── src/
-    └── bot.ts                # Main bot orchestrator
+    ├── bot.ts                # Main bot orchestrator
+    ├── commentAndRank.ts     # Handles commenting and ranking posts
+    ├── createIdea.ts         # Creates new ideas on the site
+    ├── utils.ts              # Helper utilities
+    └── prompts/
+        ├── commentAndRankPrompt.ts
+        └── createIdeaPrompt.ts
 ```
 
 ## Getting Started
