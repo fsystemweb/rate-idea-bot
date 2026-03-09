@@ -55,7 +55,7 @@ export async function commentAndRank(page: Page) {
     console.log(`Generating comment for: ${postTitle}`);
 
     const response = await openai.chat.completions.create({
-        model: 'gpt-4-turbo-preview',
+        model: 'gpt-5-nano',
         messages: [
             {
                 role: 'system',

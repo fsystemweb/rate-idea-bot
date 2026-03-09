@@ -9,7 +9,7 @@ export async function createIdea(page: Page) {
 
     console.log('Generating a new idea...');
     const response = await openai.chat.completions.create({
-        model: 'gpt-4-turbo-preview',
+        model: 'gpt-5-nano',
         messages: [
             {
                 role: 'system',

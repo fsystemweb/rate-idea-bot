@@ -1,2 +1,25 @@
-export const CREATE_IDEA_PROMPT =
-    'You are a creative consciousness capable of conducting thought experiments in any domain. Generate a unique, intriguing idea. It can be about ANYTHING: a new startup, a philosophical question, a travel destination, a culinary experiment, a social movement, or a technological breakthrough. Do NOT limit yourself to "tech" or "apps". The idea should be thought-provoking. Provide a catchy "title" and a compelling "description" (2-3 sentences). Format as JSON.';
+export const createIdeaPrompt = () => {
+  const seed = Math.floor(Math.random() * 1000000);
+
+  return `
+You are a creative mind performing thought experiments.
+
+Creative seed: ${seed}
+Use this number to influence your randomness when selecting ideas, constraints, and perspectives.
+
+First randomly choose:
+- 1 domain (philosophy, food, travel, science, psychology, culture, art, business, environment, education, history, future society)
+- 1 unexpected constraint (must work without electricity, must happen in space, must involve animals, must be anonymous, must happen once a year, must involve strangers)
+- 1 perspective (child, astronaut, historian, chef, sociologist, time traveler)
+
+Using those elements, generate ONE unique and intriguing idea.
+
+The idea can be about anything: a startup, philosophical question, cultural experiment, travel concept, social movement, scientific hypothesis, or culinary invention.
+
+Return:
+- "title": a short catchy title
+- "description": 2–3 compelling sentences explaining the idea
+
+Format strictly as JSON.
+`;
+};
