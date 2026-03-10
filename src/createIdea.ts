@@ -1,6 +1,6 @@
 import { Page } from 'playwright';
 import { openai, WEBSITE_URL, humanDelay } from './utils';
-import { CREATE_IDEA_PROMPT } from './prompts/createIdeaPrompt';
+import { createIdeaPrompt } from './prompts/createIdeaPrompt';
 
 export async function createIdea(page: Page) {
     console.log('Attempting to create a new idea...');
@@ -13,7 +13,7 @@ export async function createIdea(page: Page) {
         messages: [
             {
                 role: 'system',
-                content: CREATE_IDEA_PROMPT,
+                content: createIdeaPrompt(),
             },
             {
                 role: 'user',
