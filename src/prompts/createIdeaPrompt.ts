@@ -18,7 +18,7 @@ The idea can be about anything: a startup, philosophical question, cultural expe
 
 Return:
 - "title": a short catchy title
-- "description": 2–3 compelling sentences explaining the idea
+- "description": 2 or 3 compelling sentences explaining the idea
 
 Format strictly as JSON.
 `;
